@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Fundamentals</title>
+</head>
+<body>
+    <h2>Shopping Bill Calculation</h2>
+    <p id="output"></p>
+    <script>
+        // Variables
+        let itemPrice = 1200;
+        let quantity = 3;
+        let discountRate;
+        let finalAmount;
+
+        // Operators
+        let totalCost = itemPrice * quantity;
+
+        // Control Statements
+        if (totalCost >= 3000) {
+            discountRate = 0.20;   // 20% discount
+        } else if (totalCost >= 2000) {
+            discountRate = 0.10;   // 10% discount
+        } else {
+            discountRate = 0;      // No discount
+        }
+
+        finalAmount = totalCost - (totalCost * discountRate);
+
+        document.getElementById("output").innerHTML =
+        "Item Price: " + itemPrice + "<br>" +
+        "Quantity: " + quantity + "<br>" +
+        "Total Cost: " + totalCost + "<br>" +
+        "Final Amount after Discount: " + finalAmount;
+    </script>
+</body>
+</html>

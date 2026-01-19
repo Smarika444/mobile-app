@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="output"></p>
+
+<button onclick="addTwoNumbers()">Calculate</button>
+
+<br><br>
+
+<input type="number" id="num1" placeholder="Enter first number">
+<input type="number" id="num2" placeholder="Enter second number">
+
+<br><br>
+
+<button onclick="addNumbers()">Add</button>
+
+<p id="output1"></p>
+
+<script>
+function addTwoNumbers() {
+    document.getElementById("output").innerHTML = "Enter numbers below and click Add";
+}
+
+function addNumbers() {
+    let a = document.getElementById("num1").value;
+    let b = document.getElementById("num2").value;
+
+    let sum = Number(a) + Number(b);
+
+    document.getElementById("output1").innerHTML = sum;
+}
+</script>
+
+</body>
+</html>

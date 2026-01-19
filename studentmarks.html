@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Result</title>
+</head>
+<body>
+
+    <h2>Enter Marks for 8 Subjects</h2>
+
+    <input type="number" id="m1" placeholder="Subject 1"><br><br>
+    <input type="number" id="m2" placeholder="Subject 2"><br><br>
+    <input type="number" id="m3" placeholder="Subject 3"><br><br>
+    <input type="number" id="m4" placeholder="Subject 4"><br><br>
+    <input type="number" id="m5" placeholder="Subject 5"><br><br>
+    <input type="number" id="m6" placeholder="Subject 6"><br><br>
+    <input type="number" id="m7" placeholder="Subject 7"><br><br>
+    <input type="number" id="m8" placeholder="Subject 8"><br><br>
+
+    <button onclick="calculateResult()">Check Result</button>
+
+    <p id="total"></p>
+    <p id="result"></p>
+
+    <script>
+        function calculateResult() {
+
+            let totalMarks =
+                Number(document.getElementById("m1").value) +
+                Number(document.getElementById("m2").value) +
+                Number(document.getElementById("m3").value) +
+                Number(document.getElementById("m4").value) +
+                Number(document.getElementById("m5").value) +
+                Number(document.getElementById("m6").value) +
+                Number(document.getElementById("m7").value) +
+                Number(document.getElementById("m8").value);
+
+            let totalText = document.getElementById("total");
+            let resultText = document.getElementById("result");
+
+            totalText.innerHTML = "Total Marks: " + totalMarks + " / 800";
+
+            if (totalMarks >= 700) {
+                resultText.innerHTML = "PASS – DISTINCTION";
+                resultText.style.color = "green";
+            }
+            else if (totalMarks >= 600) {
+                resultText.innerHTML = "PASS – First Division";
+                resultText.style.color = "black";
+            }
+            else if (totalMarks >= 500) {
+                resultText.innerHTML = "PASS – Second Division";
+                resultText.style.color = "black";
+            }
+            else if (totalMarks >= 400) {
+                resultText.innerHTML = "PASS – Third Division";
+                resultText.style.color = "black";
+            }
+            else {
+                resultText.innerHTML = "FAIL";
+                resultText.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>

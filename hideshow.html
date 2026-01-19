@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hide and Show Text</title>
+</head>
+<body>
+
+<h2>Hide and Show Text</h2>
+
+<p id="text">This text can be hidden and shown.</p>
+
+<button onclick="toggleText()">Hide / Show</button>
+
+<script>
+function toggleText() {
+    var x = document.getElementById("text");
+
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
