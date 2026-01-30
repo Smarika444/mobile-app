@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Image Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .gallery {
+            float: left;
+            width: 25%;
+            padding: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;          
+            object-fit: cover;     
+        }
+
+        @media screen and (max-width: 760px) {
+            .gallery {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .gallery {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h2>Responsive Image Gallery</h2>
+<p>Resize the browser window to see the effect.</p>
+
+<div class="gallery">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Grosser_Panda.JPG/500px-Grosser_Panda.JPG">
+</div>
+<div class="gallery">
+    <img src="https://www.boredpanda.com/blog/wp-content/uploads/2025/10/68e7a01488c5c_cute-funny-cats-pics__700.jpg">
+</div>
+<div class="gallery">
+    <img src="https://i.chzbgr.com/full/10598419712/h88EC1738">
+</div>
+<div class="gallery">
+    <img src="https://i.chzbgr.com/full/10598074112/hB6481747">
+</div>
+<div class="gallery">
+    <img src="https://i.chzbgr.com/full/10598071808/hE7A446A5">
+</div>
+<div class="gallery">
+    <img src="https://i.chzbgr.com/full/10598073344/hF311ECE0">
+</div>
+<div class="gallery">
+    <img src="https://i.chzbgr.com/full/10598075136/h5B47003A">
+</div>
+<div class="gallery">
+    <img src="https://i.chzbgr.com/full/10598073600/hEE2540EF">
+</div>
+<div class="gallery">
+    <img src="https://www.akc.org/wp-content/uploads/2017/11/Bedlington-Terrier-standing-outdoors.jpg">
+</div>
+<div class="gallery">
+    <img src="https://www.akc.org/wp-content/uploads/2017/11/Afghan-Hound-standing-in-a-garden.jpg">
+</div>
+
+</body>
+</html>
+
+

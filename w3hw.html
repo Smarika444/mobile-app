@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Animate Article Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            height: 100vh;
+            position: relative;
+        }
+        h2, p {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #titleBox {
+            background: #4CAF50;
+            height: 100px;
+            width: 300px;
+            position: absolute;
+            top: 250px;
+            left: 0;
+            line-height: 100px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1em;
+            opacity: 0;          
+            border-radius: 8px;
+        }
+        @media screen and (max-width: 600px) {
+            #titleBox {
+                width: 200px;
+                height: 80px;
+                line-height: 80px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#titleBox").animate({
+                    left: "30%",
+                    top: "150px",
+                    width: "500px",
+                    height: "250px",
+                    fontSize: "2em",
+                    opacity: 1          
+                }, "slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Articles on The Kathmandu Post</h2>
+    <p>Click the button to see the article.</p>
+    <button>Show Article Title</button>
+    <div id="titleBox">The Impact of Technology on Modern Education</div>
+</body>
+</html>
+

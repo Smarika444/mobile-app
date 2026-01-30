@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shuffle Divs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+
+            $("#box1").animate({ left: "300px", top: "0px" }, "slow");
+            $("#box2").animate({ left: "300px", top: "150px" }, "slow");
+            $("#box3").animate({ left: "0px", top: "150px" }, "slow");
+            $("#box4").animate({ left: "0px", top: "0px" }, "slow");
+
+        });
+    });
+    </script>
+</head>
+
+<body>
+
+<button>Start Animation</button>
+
+<p>Click the button to shuffle the boxes.</p>
+
+<div style="position:relative; height:350px;">
+    <div id="box1" style="background:red;height:100px;width:100px;position:absolute;left:0px;top:0px;"></div>
+    <div id="box2" style="background:blue;height:100px;width:100px;position:absolute;left:150px;top:0px;"></div>
+    <div id="box3" style="background:green;height:100px;width:100px;position:absolute;left:150px;top:150px;"></div>
+    <div id="box4" style="background:orange;height:100px;width:100px;position:absolute;left:0px;top:150px;"></div>
+</div>
+
+</body>
+</html>
