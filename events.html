@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Events with CSS Change</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            margin: 15px;
+            padding: 20px;
+            border: 2px solid black;
+            display: inline-block;
+            text-align: center;
+            line-height: 60px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#div1").click(function(){
+                $(this).css({
+                    "background-color": "lightblue",
+                    "color": "white"
+                });
+            });
+
+            $("#div2").dblclick(function(){
+                $(this).css({
+                    "background-color": "green",
+                    "color": "white",
+                    "font-size": "20px"
+                });
+            });
+
+            $("#div3").mouseenter(function(){
+                $(this).css({
+                    "background-color": "orange",
+                    "border": "3px dashed red"
+                });
+            });
+
+            $("#div4").mouseleave(function(){
+                $(this).css({
+                    "background-color": "gray",
+                    "color": "white"
+                });
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="div1" class="box">Click Me</div>
+    <div id="div2" class="box">Double Click Me</div>
+    <div id="div3" class="box">Mouse Enter</div>
+    <div id="div4" class="box">Mouse Leave</div>
+
+</body>
+</html>
